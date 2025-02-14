@@ -2,74 +2,78 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
-    z-index: 1;
-}
-
-body::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width: 200vh;
-    height:100vh;
-    background: url('../images/backtech.jpg') no-repeat;
-    background-size: cover;
-    opacity: 0.5;
-    z-index: -1;
+    min-height: 100vh;
 }
 
 header {
-    background-color: rgba(51,51,51,0.8);
+    background-color: #0077cc;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    height: 20px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.profile-pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
 }
 
-ul li {
-    display: inline;
-    margin: 0 15px;
+.header-text {
+    text-align: left;
+    flex-grow: 1;
 }
 
-ul li a {
-    color: #fff;
-    text-decoration: none;
+header h1, header p {
+    margin: 10px 0;
 }
 
 main {
-    position: relative;
-    padding: 10px;
-    background-color: rgba(255,255,255, 0.8);
-    border-radius: 10px;
-    max-width: 800px;
-    margin:auto;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+h2 {
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
 }
 
 footer {
-    background-color: rgba(51,51,51,0.8);
-    color:#fff;
     text-align: center;
-    padding:10px 0;
-    margin-top: 20px;
-    position: fixed;
-    bottom: 0;
+    padding: 10px;
+    background-color: #1a1a1a;
+    color: #0077cc;
     width: 100%;
-
-}
-
-section#home img {
-    max-width: 100px;
-    border: 50%;
+    box-sizing: border-box;
 }
